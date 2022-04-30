@@ -72,6 +72,9 @@ public class event_form extends AppCompatActivity implements DatePickerDialog.On
                     intent.putExtra(CalendarContract.Events.EVENT_LOCATION, loc.getText().toString());
                     intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, getMiliseconds(sdatetime[0], stime));
                     intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, getMiliseconds(edatetime[0], etime));
+                    if(!desc.getText().toString().isEmpty()){
+                        intent.putExtra(Intent.EXTRA_EMAIL, desc.getText().toString());
+                    }
 
                     if(intent.resolveActivity(getPackageManager()) != null){
                         startActivity(intent);

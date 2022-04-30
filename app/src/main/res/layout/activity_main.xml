@@ -7,25 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/text_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="Hello! Capture or choose an image from gallery to perform OCR"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="70dp"
+        android:justificationMode="inter_word"/>
+
+    <LinearLayout
+        android:id="@+id/linlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/Linear_holder"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp">
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/text_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello! Capture or choose an image from gallery to perform OCR"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ocr"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
 
-    </ScrollView>
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/Linear_holder"
         android:layout_alignParentBottom="true"

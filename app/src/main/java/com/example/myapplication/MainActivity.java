@@ -199,9 +199,9 @@ public class MainActivity extends AppCompatActivity {
         String str = s.toString();
         String[] list = str.split("[, \n]+");
         List<String> locations = new ArrayList<>();
-        Collections.addAll(locations, "delhi", "mumbai", "kolkata", "bangalore", "chennai", "hyderabad", "pune", "nagpur", "nashik", "aurangabad", "new york", "london", "chicago", "washington", "north america", "usa", "uk", "india", "bengluru");
+        Collections.addAll(locations, "delhi", "detroit","mumbai", "kolkata", "bangalore", "chennai", "hyderabad", "pune", "nagpur", "nashik", "aurangabad", "new york", "london", "chicago", "washington", "north america", "usa", "uk", "india", "bengluru");
         for(String val : list){
-            if(locations.contains(val)){
+            if(locations.contains(val.toLowerCase())){
                 return val;
             }
         }
